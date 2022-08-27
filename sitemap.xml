@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/08/defcon30quals_constricted/</loc>
+    
+    <lastmod>2022-08-27T15:18:17.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/09/protobuf_ctf_fuzz/</loc>
+    
+    <lastmod>2022-08-25T13:32:47.590Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/08/thread_canary/</loc>
+    
+    <lastmod>2022-08-25T01:37:23.896Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/about/index.html</loc>
+    
+    <lastmod>2022-07-14T13:41:57.758Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/about/resume.html</loc>
+    
+    <lastmod>2022-05-05T10:40:32.293Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/04/dirty-pipe/</loc>
+    
+    <lastmod>2022-04-03T07:33:41.136Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/03/syzkaller-1/</loc>
+    
+    <lastmod>2022-03-23T08:48:05.800Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/03/other_paper_notes/</loc>
+    
+    <lastmod>2022-03-08T03:17:31.699Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/02/rwctf2022_hso/</loc>
+    
+    <lastmod>2022-03-01T12:58:14.356Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/02/e9patch/</loc>
+    
+    <lastmod>2022-03-01T12:20:59.110Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/01/rwctf2022_flag/</loc>
+    
+    <lastmod>2022-02-07T16:06:58.870Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/01/rwctf2022_qws/</loc>
+    
+    <lastmod>2022-02-07T15:57:15.331Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/12/vmware_macos/</loc>
+    
+    <lastmod>2022-01-27T15:59:16.945Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/01/IMF/</loc>
+    
+    <lastmod>2022-01-26T08:29:09.195Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/01/ubuntu_desktop_recover/</loc>
+    
+    <lastmod>2022-01-18T08:36:35.479Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/about/tencent_interview.html</loc>
+    
+    <lastmod>2022-01-09T01:29:18.282Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/01/35c3ctf_pillow/</loc>
+    
+    <lastmod>2022-01-08T15:32:18.105Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/12/mach_ipc_intro/</loc>
+    
+    <lastmod>2022-01-06T14:23:26.724Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/01/mach_xpc_intro/</loc>
+    
+    <lastmod>2022-01-05T01:39:57.094Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/05/epoll/</loc>
+    
+    <lastmod>2021-12-26T08:08:36.068Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/05/cnatda-2/</loc>
+    
+    <lastmod>2021-12-26T08:02:26.173Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/12/reversing_kr-1/</loc>
+    
+    <lastmod>2021-12-12T09:51:50.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/12/coop/</loc>
+    
+    <lastmod>2021-12-02T14:03:54.360Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/12/collafl/</loc>
+    
+    <lastmod>2021-12-01T14:23:05.213Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/VScape_Assessing_and_Escaping_Virtual_Call_Protections/</loc>
+    
+    <lastmod>2021-12-01T14:21:06.356Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/about/essay.html</loc>
+    
+    <lastmod>2021-12-01T07:52:02.700Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/healer/</loc>
+    
+    <lastmod>2021-11-30T02:34:23.495Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/syzkaller_1/</loc>
+    
+    <lastmod>2021-11-27T14:31:52.469Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/cs144-lab7/</loc>
+    
+    <lastmod>2021-11-18T13:28:17.893Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/cs144-lab6/</loc>
+    
+    <lastmod>2021-11-18T13:28:11.744Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/cs144-lab5/</loc>
+    
+    <lastmod>2021-11-18T09:21:08.349Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/cs144-lab2/</loc>
+    
+    <lastmod>2021-11-16T06:34:26.068Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/cs144-lab3/</loc>
+    
+    <lastmod>2021-11-16T06:34:16.275Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/cs144-lab4/</loc>
+    
+    <lastmod>2021-11-16T06:33:55.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/cs144-lab1/</loc>
+    
+    <lastmod>2021-11-16T01:17:10.949Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/11/cs144-lab0/</loc>
+    
+    <lastmod>2021-11-08T09:01:52.189Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/gdb_command/</loc>
+    
+    <lastmod>2021-10-24T04:07:26.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/10/kernel_pwn_introduction/</loc>
+    
+    <lastmod>2021-10-13T14:13:46.794Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/09/pwnable-tw-2/</loc>
+    
+    <lastmod>2021-09-23T15:09:18.530Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/06/ANSI-Unicode-type-confusion-study/</loc>
+    
+    <lastmod>2021-07-24T16:16:29.118Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/05/WebServer-1/</loc>
+    
+    <lastmod>2021-05-16T00:52:37.496Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/05/cnatda-1/</loc>
+    
+    <lastmod>2021-05-15T13:31:42.746Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/Welcome/</loc>
+    
+    <lastmod>2021-05-09T15:10:21.923Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/09/uCore-7/</loc>
+    
+    <lastmod>2021-05-09T14:50:12.363Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/08/uCore-4/</loc>
+    
+    <lastmod>2021-05-09T14:50:00.458Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/SROP/</loc>
+    
+    <lastmod>2021-05-09T14:49:52.126Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/misc/</loc>
+    
+    <lastmod>2021-05-09T14:49:41.920Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/heap-12-fastbin_attack/</loc>
+    
+    <lastmod>2021-05-09T14:49:32.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/heap-8-UAF/</loc>
+    
+    <lastmod>2021-05-09T14:49:19.624Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/heap-3-bins/</loc>
+    
+    <lastmod>2021-05-09T14:49:08.794Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/heap-13-off-by-one-and-realloc-hook/</loc>
+    
+    <lastmod>2021-05-09T14:48:54.578Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/04/i386_WSL64/</loc>
+    
+    <lastmod>2021-05-09T14:48:34.025Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/10/mojo/</loc>
+    
+    <lastmod>2021-05-09T14:48:21.885Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/08/uCore-1/</loc>
+    
+    <lastmod>2021-05-09T14:48:08.115Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/09/uCore-8/</loc>
+    
+    <lastmod>2021-05-09T14:48:00.778Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/04/v8TurboFan_IR_intro/</loc>
+    
+    <lastmod>2021-05-09T14:47:47.225Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/01/v8-turboFan/</loc>
+    
+    <lastmod>2021-05-09T14:47:29.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/01/CVE-2021-3156/</loc>
+    
+    <lastmod>2021-05-09T14:47:14.965Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/10/CVE-2020-6549/</loc>
+    
+    <lastmod>2021-05-09T14:47:04.739Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/10/CVE-2020-6541/</loc>
+    
+    <lastmod>2021-05-09T14:46:55.716Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/02/CVE-2020-6468/</loc>
+    
+    <lastmod>2021-05-09T14:46:43.605Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/02/CVE-2019-13764/</loc>
+    
+    <lastmod>2021-05-09T14:46:25.243Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/10/CVE-2019-5826/</loc>
+    
+    <lastmod>2021-05-09T14:46:08.284Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/02/CVE-2019-5755/</loc>
+    
+    <lastmod>2021-05-09T14:45:52.153Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/07/csapp/</loc>
+    
+    <lastmod>2021-05-09T14:45:34.778Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/07/csapp-lab-writeup/</loc>
+    
+    <lastmod>2021-05-09T14:45:23.968Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/buuoj-pwn/</loc>
+    
+    <lastmod>2021-05-09T14:45:07.822Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/07/AFL-LLVM-Mode/</loc>
+    
+    <lastmod>2021-05-09T14:43:49.134Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/06/LLVM-IR-pass/</loc>
+    
+    <lastmod>2021-05-09T14:42:57.420Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/06/actf2020/</loc>
+    
+    <lastmod>2021-05-09T14:42:27.135Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/2020wdbctf/</loc>
+    
+    <lastmod>2021-05-09T14:40:20.186Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/friends/index.html</loc>
+    
+    <lastmod>2021-04-09T04:54:19.529Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2021/03/CVE-2018-16065/</loc>
+    
+    <lastmod>2021-03-04T10:38:47.753Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/11/fetch-chromium/</loc>
+    
+    <lastmod>2021-01-16T01:40:01.996Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/12/secLab-CodeQL-learning/</loc>
+    
+    <lastmod>2020-12-24T15:50:02.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/12/CodeQL-setup/</loc>
+    
+    <lastmod>2020-12-24T15:38:50.203Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-11-19T09:40:10.744Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-11-19T09:40:10.743Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/10/vuln-patterns/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.741Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/09/uCore-6/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/08/uCore-5/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/08/uCore-3/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.707Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/08/uCore-2/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.706Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/reverse/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.694Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/pwn/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.691Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/03/pwnable.tw/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.691Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/heap-9-__int_free_source/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.672Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/heap-7-%20__int_malloc_source/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.668Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/heap-4-_int_malloc_process/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.667Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/heap-6-__libc_malloc_source/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.667Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/heap-5-heap_definitions/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.667Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/03/heap-2-chunks/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.665Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/heap-14-house/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.665Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/heap-10-_int_free_process/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.649Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/heap-11-malloc_consolidate/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.649Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/03/heap-1-arena/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.649Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/crypto/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/06/compiler-learning/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/05/STL_learning/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.569Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/06/MakefileIntroduce/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.568Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/02/HNUCTF2020-pwn/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.552Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2020/04/CTF_web/</loc>
+    
+    <lastmod>2020-11-19T09:40:10.535Z</lastmod>
+    
+  </url>
+  
+</urlset>

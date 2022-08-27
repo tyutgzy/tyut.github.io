@@ -1,0 +1,3 @@
+https://kiprey.github.io/2022/08/defcon30quals_constricted/
+https://kiprey.github.io/2022/08/thread_canary/
+https://kiprey.github.io/2022/04/dirty-pipe/
