@@ -162,6 +162,69 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-rwctf2022_qws"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/01/rwctf2022_qws/"
+    >RWCTF2022 Pwn 笔记1</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/01/rwctf2022_qws/" class="article-date">
+  <time datetime="2022-01-24T16:00:00.000Z" itemprop="datePublished">2022-01-25</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、简介">一、简介</h2>
+<p>这里是复盘 RWCTF2022 关于:</p>
+<ul>
+<li>QLaas</li>
+<li>Who Moved My Block</li>
+<li>SVME</li>
+</ul>
+<p>这三道题时所写下的一些笔记。</p>
+<blockquote>
+<p>受限于时间与效率，一部分题目的 exp 将不再贴出，只会记录下解题或利用的详细流程。</p>
+</blockquote> 
+      <a class="article-more-link" href="/2022/01/rwctf2022_qws/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pwn/" rel="tag">Pwn</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-IMF"
   class="article article-type-post"
   itemscope
@@ -723,73 +786,6 @@ var _hmt = _hmt || [];
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AFL/" rel="tag">AFL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuzz/" rel="tag">fuzz</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-VScape_Assessing_and_Escaping_Virtual_Call_Protections"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/VScape_Assessing_and_Escaping_Virtual_Call_Protections/"
-    >《VScape - Assessing and Escaping Virtual Call Protections》 论文笔记</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/11/VScape_Assessing_and_Escaping_Virtual_Call_Protections/" class="article-date">
-  <time datetime="2021-11-29T16:00:00.000Z" itemprop="datePublished">2021-11-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、简介">一、简介</h2>
-<p>这篇论文介绍了一种面向伪对象编程（COOP）的<strong>加强攻击手法</strong>，称为 <strong>COOPlus</strong>。对于那些不破坏 C++ ABI 的虚拟调用保护来说，有相当一部分的 虚拟调用保护手段易受 COOPlus 的攻击。</p>
-<p><strong>符合以下三个条件的虚拟函数调用容易受到 COOPlus 的攻击：</strong></p>
-<ul>
-<li><strong>不破坏虚函数调用的 ABI</strong></li>
-<li><strong>不保证 C++ 对象 vtable 指针的完整性（即可以被修改）</strong></li>
-<li><strong>允许在虚拟函数调用点上调用不同的函数</strong></li>
-</ul>
-<p>COOPlus 本质上是<strong>代码重用</strong>攻击，它在目标虚拟函数调用点上调用<strong>符合类型但不符合上下文</strong>的虚拟函数。该调用可通过 C++ 语义感知的 <strong>控制流完整性 CFI</strong> 检测，但由于调用上下文不同，因此可能会造成进一步的利用。</p>
-<p>除了 COOPlus 以外，该论文还提出了一种解决方案 <strong>VScape</strong>，用来评估针对虚拟调用攻击保护的有效性。</p>
-<p>论文 + 幻灯片 - <a href="https://www.usenix.org/conference/usenixsecurity21/presentation/chen-kaixiang" target="_blank" rel="noopener">USENIX security 21</a></p> 
-      <a class="article-more-link" href="/2021/11/VScape_Assessing_and_Escaping_Virtual_Call_Protections/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuzz/" rel="tag">fuzz</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtual-call/" rel="tag">virtual call</a></li></ul>
 
     </footer>
   </div>

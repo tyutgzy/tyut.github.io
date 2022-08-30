@@ -162,6 +162,62 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-cs144-lab0"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/11/cs144-lab0/"
+    >CS144计算机网络 Lab0</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/11/cs144-lab0/" class="article-date">
+  <time datetime="2021-11-03T16:00:00.000Z" itemprop="datePublished">2021-11-04</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、简介">一、简介</h2>
+<p>这里记录了笔者配置 CS144 计算机网络实验环境的一些步骤。</p>
+<p>CS144 Lab0 实验指导书 - <a href="https://cs144.github.io/assignments/lab0.pdf" target="_blank" rel="noopener">Lab Checkpoint 0: networking warmup</a></p>
+<p>个人 CS144 实验项目地址 - <a href="https://github.com/Kiprey/sponge" target="_blank" rel="noopener">github</a></p> 
+      <a class="article-more-link" href="/2021/11/cs144-lab0/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CS144/" rel="tag">CS144</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-kernel_pwn_introduction"
   class="article article-type-post"
   itemscope
@@ -718,65 +774,6 @@ var _hmt = _hmt || [];
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wsl/" rel="tag">wsl</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-CVE-2018-16065"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/03/CVE-2018-16065/"
-    >CVE-2018-16065 分析</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/03/CVE-2018-16065/" class="article-date">
-  <time datetime="2021-03-03T16:00:00.000Z" itemprop="datePublished">2021-03-04</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/vulnerability-analysis/">vulnerability analysis</a> / <a class="article-category-link" href="/categories/vulnerability-analysis/v8/">v8</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、前言">一、前言</h2>
-<p>CVE-2018-16065 是 v8 中 <code>EmitBigTypedArrayElementStore</code> 函数内部的一个漏洞。该漏洞在检查相应 ArrayBuffer 是否被 Detach（即是否是<code>neutered</code>）之后，执行了一个带有<strong>副作用</strong>的（即<strong>可调用用户 JS callback 代码</strong>的） <code>ToBigInt</code> 函数。而用户可在对应回调函数中将原先通过上述检查的 BigIntArray （即<strong>不是 neutered 的 TypedArray</strong>）重新变成 <code>neutered</code>。</p>
-<p>这将使一部分数据被非法写入至一块已经 Detached 的 ArrayBuffer上。如果 GC 试图回收该 ArrayBuffer 的 backing store ，则会触发 CRASH。</p> 
-      <a class="article-more-link" href="/2021/03/CVE-2018-16065/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v8/" rel="tag">v8</a></li></ul>
 
     </footer>
   </div>

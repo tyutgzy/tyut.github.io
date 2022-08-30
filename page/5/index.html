@@ -162,6 +162,65 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-CVE-2018-16065"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/03/CVE-2018-16065/"
+    >CVE-2018-16065 分析</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/03/CVE-2018-16065/" class="article-date">
+  <time datetime="2021-03-03T16:00:00.000Z" itemprop="datePublished">2021-03-04</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/vulnerability-analysis/">vulnerability analysis</a> / <a class="article-category-link" href="/categories/vulnerability-analysis/v8/">v8</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、前言">一、前言</h2>
+<p>CVE-2018-16065 是 v8 中 <code>EmitBigTypedArrayElementStore</code> 函数内部的一个漏洞。该漏洞在检查相应 ArrayBuffer 是否被 Detach（即是否是<code>neutered</code>）之后，执行了一个带有<strong>副作用</strong>的（即<strong>可调用用户 JS callback 代码</strong>的） <code>ToBigInt</code> 函数。而用户可在对应回调函数中将原先通过上述检查的 BigIntArray （即<strong>不是 neutered 的 TypedArray</strong>）重新变成 <code>neutered</code>。</p>
+<p>这将使一部分数据被非法写入至一块已经 Detached 的 ArrayBuffer上。如果 GC 试图回收该 ArrayBuffer 的 backing store ，则会触发 CRASH。</p> 
+      <a class="article-more-link" href="/2021/03/CVE-2018-16065/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v8/" rel="tag">v8</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-CVE-2019-5755"
   class="article article-type-post"
   itemscope
@@ -725,66 +784,6 @@ var _hmt = _hmt || [];
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/" rel="tag">chrome</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-vuln-patterns"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/10/vuln-patterns/"
-    >一些有趣的漏洞模式</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/10/vuln-patterns/" class="article-date">
-  <time datetime="2020-10-25T13:54:35.000Z" itemprop="datePublished">2020-10-25</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%A4%A9%E9%97%AE%E4%B9%8B%E8%B7%AF/">天问之路</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="简介">简介</h2>
-<ul>
-<li>这里会持续记录平常见到的一些漏洞模式</li>
-</ul> 
-      <a class="article-more-link" href="/2020/10/vuln-patterns/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vuln-patterns/" rel="tag">vuln patterns</a></li></ul>
 
     </footer>
   </div>

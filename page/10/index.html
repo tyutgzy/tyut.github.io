@@ -162,6 +162,76 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-heap-5-heap_definitions"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/04/heap-5-heap_definitions/"
+    >heap - 5 - malloc、free函数相关的宏定义</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/04/heap-5-heap_definitions/" class="article-date">
+  <time datetime="2020-04-03T16:00:00.000Z" itemprop="datePublished">2020-04-04</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>注：宏定义 <strong>不建议</strong> 单独阅读，应在分析源代码时查阅参考</p>
+<h2 id="fastbin相关宏定义">fastbin相关宏定义</h2>
+<ol>
+<li><code>set_max_fast(s)</code>
+<ul>
+<li>
+<p>用处</p>
+<ul>
+<li>设置fast chunk大小的最大值为变量s（为0则弃用fast chunk和fastbin）</li>
+</ul>
+</li>
+<li>
+<p>源代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> set_max_fast(s) \</span></span><br><span class="line">  global_max_fast = (((s) == <span class="number">0</span>)      \</span><br><span class="line">      ? SMALLBIN_WIDTH : ((s + SIZE_SZ) &amp; ~MALLOC_ALIGN_MASK))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol> 
+      <a class="article-more-link" href="/2020/04/heap-5-heap_definitions/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Heap/" rel="tag">Heap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pwn/" rel="tag">Pwn</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-heap-3-bins"
   class="article article-type-post"
   itemscope

@@ -162,6 +162,59 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-gdb_command"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/04/gdb_command/"
+    >gdb 常用命令</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/04/gdb_command/" class="article-date">
+  <time datetime="2020-04-22T16:00:00.000Z" itemprop="datePublished">2020-04-23</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>GDB 常用命令指南</p> 
+      <a class="article-more-link" href="/2020/04/gdb_command/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-heap-8-UAF"
   class="article article-type-post"
   itemscope
@@ -351,7 +404,7 @@ var _hmt = _hmt || [];
 
     
     <article
-  id="post-misc"
+  id="post-CTF_web"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -362,8 +415,8 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/04/misc/"
-    >CTF Misc 的笔记</a> 
+  <a class="article-title" href="/2020/04/CTF_web/"
+    >CTF Web 的笔记</a> 
 </h2>
  
 
@@ -371,26 +424,30 @@ var _hmt = _hmt || [];
     </header>
      
     <div class="article-meta">
-      <a href="/2020/04/misc/" class="article-date">
+      <a href="/2020/04/CTF_web/" class="article-date">
   <time datetime="2020-04-15T16:00:00.000Z" itemprop="datePublished">2020-04-16</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>一点点曾经整理的Misc笔记，数量较少。</p>
-<h2 id="1-git">1. git</h2>
+  <p>一点点曾经整理的Web笔记，篇幅会相对较小一点。</p>
+<h2 id="1-XXE-攻击-XML">1. XXE 攻击 (XML)</h2>
 <ol>
 <li>
-<p>查找所有 commit - <a href="https://www.cnblogs.com/Tkitn/p/11648456.html" target="_blank" rel="noopener">参考链接</a></p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看所有commit，包括已撤回的提交</span></span><br><span class="line">git <span class="built_in">log</span> --reflog</span><br><span class="line"><span class="comment"># 重置commit头</span></span><br><span class="line">git reset --hard [commit-Hash]</span><br></pre></td></tr></table></figure>
+<p>示例</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">foo</span> [<span class="meta">&lt;!ENTITY <span class="meta-keyword">xxe</span> <span class="meta-keyword">SYSTEM</span> <span class="meta-string">"php://filter/read=convert.base64-encode/resource=flag.php"</span>&gt;</span> ]&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">user</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">username</span>&gt;</span></span><br><span class="line">    <span class="symbol">&amp;xxe;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">password</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">user</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>查看 git 提交的文件内容 - <a href="https://blog.csdn.net/daguanjia11/article/details/73309026" target="_blank" rel="noopener">git 对象库</a></p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看所有提交log（包括已撤回的提交）</span></span><br><span class="line">git <span class="built_in">log</span> --pretty=raw</span><br><span class="line"><span class="comment"># 查看某个Hash值对应的类型</span></span><br><span class="line">git cat-file -t [Hash]</span><br><span class="line"><span class="comment"># 查看某个Hash值对应的内容</span></span><br><span class="line">git cat-file -p [tree/file-Hash]</span><br><span class="line"><span class="comment"># 查看树的内容</span></span><br><span class="line">git ls-tree [-r是否递归][-t输出更完整的信息（包括子树）] [commit/tree-hash]</span><br></pre></td></tr></table></figure>
-</li>
-</ol> 
-      <a class="article-more-link" href="/2020/04/misc/"
+</ol>
+<h2 id="2-SSRF">2. SSRF</h2>
+<h3 id="函数的注意点">函数的注意点</h3>
+<h4 id="1-cURL">1. cURL</h4>
+<h4 id="2-file-get-contents">2. file_get_contents</h4>
+<ul>
+<li>gopher 协议无法URLencode</li>
+<li>关于gopher的302跳转有bug，导致利用失败</li>
+</ul> 
+      <a class="article-more-link" href="/2020/04/CTF_web/"
         >阅读更多...</a
       >
        
@@ -403,7 +460,7 @@ var _hmt = _hmt || [];
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Misc/" rel="tag">Misc</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
 
     </footer>
   </div>
@@ -488,7 +545,7 @@ var _hmt = _hmt || [];
 
     
     <article
-  id="post-CTF_web"
+  id="post-misc"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -499,8 +556,8 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/04/CTF_web/"
-    >CTF Web 的笔记</a> 
+  <a class="article-title" href="/2020/04/misc/"
+    >CTF Misc 的笔记</a> 
 </h2>
  
 
@@ -508,30 +565,26 @@ var _hmt = _hmt || [];
     </header>
      
     <div class="article-meta">
-      <a href="/2020/04/CTF_web/" class="article-date">
+      <a href="/2020/04/misc/" class="article-date">
   <time datetime="2020-04-15T16:00:00.000Z" itemprop="datePublished">2020-04-16</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>一点点曾经整理的Web笔记，篇幅会相对较小一点。</p>
-<h2 id="1-XXE-攻击-XML">1. XXE 攻击 (XML)</h2>
+  <p>一点点曾经整理的Misc笔记，数量较少。</p>
+<h2 id="1-git">1. git</h2>
 <ol>
 <li>
-<p>示例</p>
- <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">foo</span> [<span class="meta">&lt;!ENTITY <span class="meta-keyword">xxe</span> <span class="meta-keyword">SYSTEM</span> <span class="meta-string">"php://filter/read=convert.base64-encode/resource=flag.php"</span>&gt;</span> ]&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">user</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">username</span>&gt;</span></span><br><span class="line">    <span class="symbol">&amp;xxe;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">password</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">user</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>查找所有 commit - <a href="https://www.cnblogs.com/Tkitn/p/11648456.html" target="_blank" rel="noopener">参考链接</a></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看所有commit，包括已撤回的提交</span></span><br><span class="line">git <span class="built_in">log</span> --reflog</span><br><span class="line"><span class="comment"># 重置commit头</span></span><br><span class="line">git reset --hard [commit-Hash]</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<h2 id="2-SSRF">2. SSRF</h2>
-<h3 id="函数的注意点">函数的注意点</h3>
-<h4 id="1-cURL">1. cURL</h4>
-<h4 id="2-file-get-contents">2. file_get_contents</h4>
-<ul>
-<li>gopher 协议无法URLencode</li>
-<li>关于gopher的302跳转有bug，导致利用失败</li>
-</ul> 
-      <a class="article-more-link" href="/2020/04/CTF_web/"
+<li>
+<p>查看 git 提交的文件内容 - <a href="https://blog.csdn.net/daguanjia11/article/details/73309026" target="_blank" rel="noopener">git 对象库</a></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看所有提交log（包括已撤回的提交）</span></span><br><span class="line">git <span class="built_in">log</span> --pretty=raw</span><br><span class="line"><span class="comment"># 查看某个Hash值对应的类型</span></span><br><span class="line">git cat-file -t [Hash]</span><br><span class="line"><span class="comment"># 查看某个Hash值对应的内容</span></span><br><span class="line">git cat-file -p [tree/file-Hash]</span><br><span class="line"><span class="comment"># 查看树的内容</span></span><br><span class="line">git ls-tree [-r是否递归][-t输出更完整的信息（包括子树）] [commit/tree-hash]</span><br></pre></td></tr></table></figure>
+</li>
+</ol> 
+      <a class="article-more-link" href="/2020/04/misc/"
         >阅读更多...</a
       >
        
@@ -544,7 +597,7 @@ var _hmt = _hmt || [];
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Misc/" rel="tag">Misc</a></li></ul>
 
     </footer>
   </div>
@@ -638,76 +691,6 @@ var _hmt = _hmt || [];
        
   <p>调用<code>malloc</code>后首执行的函数  —— <code>__libc_malloc</code>!</p> 
       <a class="article-more-link" href="/2020/04/heap-6-__libc_malloc_source/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Heap/" rel="tag">Heap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pwn/" rel="tag">Pwn</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-heap-5-heap_definitions"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/heap-5-heap_definitions/"
-    >heap - 5 - malloc、free函数相关的宏定义</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/04/heap-5-heap_definitions/" class="article-date">
-  <time datetime="2020-04-03T16:00:00.000Z" itemprop="datePublished">2020-04-04</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>注：宏定义 <strong>不建议</strong> 单独阅读，应在分析源代码时查阅参考</p>
-<h2 id="fastbin相关宏定义">fastbin相关宏定义</h2>
-<ol>
-<li><code>set_max_fast(s)</code>
-<ul>
-<li>
-<p>用处</p>
-<ul>
-<li>设置fast chunk大小的最大值为变量s（为0则弃用fast chunk和fastbin）</li>
-</ul>
-</li>
-<li>
-<p>源代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> set_max_fast(s) \</span></span><br><span class="line">  global_max_fast = (((s) == <span class="number">0</span>)      \</span><br><span class="line">      ? SMALLBIN_WIDTH : ((s + SIZE_SZ) &amp; ~MALLOC_ALIGN_MASK))</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol> 
-      <a class="article-more-link" href="/2020/04/heap-5-heap_definitions/"
         >阅读更多...</a
       >
        
