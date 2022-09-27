@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://kiprey.github.io/2020/10/CVE-2020-6549/</loc>
+    <lastmod>2022-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://kiprey.github.io/2020/10/CVE-2020-6541/</loc>
+    <lastmod>2022-09-27</lastmod>
+  </url>
+  <url>
     <loc>https://kiprey.github.io/2022/08/defcon30quals_smugglers_cove/</loc>
     <lastmod>2022-08-30</lastmod>
   </url>
@@ -218,14 +226,6 @@
   </url>
   <url>
     <loc>https://kiprey.github.io/2021/01/CVE-2021-3156/</loc>
-    <lastmod>2021-05-09</lastmod>
-  </url>
-  <url>
-    <loc>https://kiprey.github.io/2020/10/CVE-2020-6549/</loc>
-    <lastmod>2021-05-09</lastmod>
-  </url>
-  <url>
-    <loc>https://kiprey.github.io/2020/10/CVE-2020-6541/</loc>
     <lastmod>2021-05-09</lastmod>
   </url>
   <url>
