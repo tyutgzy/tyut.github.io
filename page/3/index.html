@@ -162,6 +162,73 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-collafl"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/collafl/"
+    >《CollAFL - Path Sensitive Fuzzing》论文笔记</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/collafl/" class="article-date">
+  <time datetime="2021-11-30T16:00:00.000Z" itemprop="datePublished">2021-12-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、简介">一、简介</h2>
+<p>现有 fuzz 大多以代码覆盖率为引导指标。以AFL为例，它使用<strong>映射至 hashmap 中的基于 edge 的覆盖率信息</strong>来引导测试。这种覆盖率信息不太准确，因为<strong>只统计至 edge 层面</strong>，同时还会<strong>产生覆盖 hash 冲突</strong>，丢失覆盖率信息，给模糊测试带来一些不良限制。</p>
+<p>这篇论文提出了一个新的方式，来达到以下三个目的：</p>
+<ul>
+<li>提供<strong>更准确的覆盖信息</strong></li>
+<li><strong>缓解</strong>路径冲突</li>
+<li>保持<strong>较低检测开销</strong></li>
+</ul>
+<p>同时，该论文还利用覆盖率信息，提出了<strong>三种新的模糊测试策略</strong>，加快了发现新路径和漏洞的速度。</p>
+<p>下图是一个完整 fuzz 的工作流程，其中黄色标注部分为论文所提出的<strong>重点思路</strong>：</p>
+<p><img src="/2021/12/collafl/image-20211201164140587.png" alt="image-20211201164140587"></p> 
+      <a class="article-more-link" href="/2021/12/collafl/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AFL/" rel="tag">AFL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fuzz/" rel="tag">fuzz</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-VScape_Assessing_and_Escaping_Virtual_Call_Protections"
   class="article article-type-post"
   itemscope
@@ -661,63 +728,6 @@ var _hmt = _hmt || [];
 <p>CS144 Lab2 实验指导书 - <a href="https://cs144.github.io/assignments/lab2.pdf" target="_blank" rel="noopener">Lab Checkpoint 2: the TCP receiver</a></p>
 <p>个人 CS144 实验项目地址 - <a href="https://github.com/Kiprey/sponge" target="_blank" rel="noopener">github</a></p> 
       <a class="article-more-link" href="/2021/11/cs144-lab2/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CS144/" rel="tag">CS144</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-cs144-lab1"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/cs144-lab1/"
-    >CS144计算机网络 Lab1</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/11/cs144-lab1/" class="article-date">
-  <time datetime="2021-11-04T16:00:00.000Z" itemprop="datePublished">2021-11-05</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、简介">一、简介</h2>
-<p>这里记录了笔者学习 CS144 计算机网络 Lab1 的一些笔记 - 流重组器 StreamReassembler</p>
-<p>CS144 Lab1 实验指导书 - <a href="https://cs144.github.io/assignments/lab1.pdf" target="_blank" rel="noopener">Lab Checkpoint 1: stitching substrings into a byte stream</a></p>
-<p>个人 CS144 实验项目地址 - <a href="https://github.com/Kiprey/sponge" target="_blank" rel="noopener">github</a></p>
-<p>PS: 在做 CS144 前，最好先学一手计网理论，或者读读我之前写的<a href="https://kiprey.github.io/2021/05/cnatda-1/#4-%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%BF%90%E8%BE%93%EF%BC%9ATCP">笔记</a></p> 
-      <a class="article-more-link" href="/2021/11/cs144-lab1/"
         >阅读更多...</a
       >
        

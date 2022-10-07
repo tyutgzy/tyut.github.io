@@ -162,6 +162,69 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-actf2020"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/06/actf2020/"
+    >ACTF五校联赛</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/06/actf2020/" class="article-date">
+  <time datetime="2020-06-03T11:21:25.000Z" itemprop="datePublished">2020-06-03</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-Pwn">1. Pwn</h2>
+<h3 id="1-secret-of-girlfriend">1. secret_of_girlfriend</h3>
+<h4 id="分析">分析</h4>
+<ul>
+<li>程序中有三处地方内藏flag，两处在data段，一处在bss。其中有两处会被销毁，只剩下一处flag还存在。</li>
+<li>程序内部有缓冲区溢出，开启<code>Canary</code>保护</li>
+<li>通过缓冲区溢出，覆盖栈上<code>environ</code>处指向程序名称的指针为flag地址，并通过<code>___stack_chk_fail</code>将剩下一处flag打印出来就好</li>
+</ul>
+<blockquote>
+<p>实际上如果三处flag都被覆盖，仍然有办法可以得到flag。</p>
+</blockquote> 
+      <a class="article-more-link" href="/2020/06/actf2020/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-STL_learning"
   class="article article-type-post"
   itemscope
@@ -747,59 +810,6 @@ var _hmt = _hmt || [];
 </li>
 </ul> 
       <a class="article-more-link" href="/2020/05/heap-11-malloc_consolidate/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Heap/" rel="tag">Heap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pwn/" rel="tag">Pwn</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-heap-9-__int_free_source"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/05/heap-9-__int_free_source/"
-    >heap - 9 - _int_free 源码及其部分分析</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/05/heap-9-__int_free_source/" class="article-date">
-  <time datetime="2020-05-03T16:00:00.000Z" itemprop="datePublished">2020-05-04</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><code>__int_free</code> —— 核心内存释放函数</p> 
-      <a class="article-more-link" href="/2020/05/heap-9-__int_free_source/"
         >阅读更多...</a
       >
        
