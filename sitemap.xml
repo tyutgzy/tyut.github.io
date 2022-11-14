@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kiprey.github.io/2022/10/dirty-cred/</loc>
+    <loc>https://kiprey.github.io/2022/11/baoyan-note/</loc>
     
-    <lastmod>2022-10-07T03:49:23.126Z</lastmod>
+    <lastmod>2022-11-14T05:58:43.119Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://kiprey.github.io/about/index.html</loc>
     
-    <lastmod>2022-09-27T06:38:15.191Z</lastmod>
+    <lastmod>2022-10-15T06:24:32.294Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kiprey.github.io/2022/10/dirty-cred/</loc>
+    
+    <lastmod>2022-10-07T03:49:23.126Z</lastmod>
     
   </url>
   
@@ -569,14 +576,14 @@
   </url>
   
   <url>
-    <loc>https://kiprey.github.io/2020/08/uCore-5/</loc>
+    <loc>https://kiprey.github.io/2020/09/uCore-6/</loc>
     
     <lastmod>2020-11-19T09:40:10.713Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kiprey.github.io/2020/09/uCore-6/</loc>
+    <loc>https://kiprey.github.io/2020/08/uCore-5/</loc>
     
     <lastmod>2020-11-19T09:40:10.713Z</lastmod>
     
@@ -604,14 +611,14 @@
   </url>
   
   <url>
-    <loc>https://kiprey.github.io/2020/03/pwnable.tw/</loc>
+    <loc>https://kiprey.github.io/2020/04/pwn/</loc>
     
     <lastmod>2020-11-19T09:40:10.691Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kiprey.github.io/2020/04/pwn/</loc>
+    <loc>https://kiprey.github.io/2020/03/pwnable.tw/</loc>
     
     <lastmod>2020-11-19T09:40:10.691Z</lastmod>
     
@@ -667,14 +674,14 @@
   </url>
   
   <url>
-    <loc>https://kiprey.github.io/2020/03/heap-1-arena/</loc>
+    <loc>https://kiprey.github.io/2020/05/heap-10-_int_free_process/</loc>
     
     <lastmod>2020-11-19T09:40:10.649Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kiprey.github.io/2020/05/heap-10-_int_free_process/</loc>
+    <loc>https://kiprey.github.io/2020/03/heap-1-arena/</loc>
     
     <lastmod>2020-11-19T09:40:10.649Z</lastmod>
     

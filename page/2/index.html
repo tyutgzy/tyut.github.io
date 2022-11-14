@@ -162,6 +162,65 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-rwctf2022_hso"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/02/rwctf2022_hso/"
+    >RWCTF2022 Pwn 笔记3 - hso groupie Writeup</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/02/rwctf2022_hso/" class="article-date">
+  <time datetime="2022-02-01T16:00:00.000Z" itemprop="datePublished">2022-02-02</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="简介">简介</h2>
+<p>这里是复盘 RWCTF2022 中 <code>hso groupie</code> 题时所写下的一些笔记，考点来源于 Project Zero 的 <strong>A deep dive into an NSO zero-click iMessage exploit: Remote Code Execution</strong> 一文。</p>
+<p>整体的做题思路主要由 Riatre 师傅的 exploit 中所推导出，换句话说，这里的笔记主要是对 <a href="https://github.com/Riatre/hso-groupie/tree/master/exploit" target="_blank" rel="noopener">作者 exploit</a> 的解释说明。</p>
+<p>由于这题同样也较为复杂，因此需要单独开一个博文来记录。</p>
+<blockquote>
+<p>联合作者：sakura</p>
+</blockquote> 
+      <a class="article-more-link" href="/2022/02/rwctf2022_hso/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pwn/" rel="tag">Pwn</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-rwctf2022_flag"
   class="article article-type-post"
   itemscope
@@ -705,78 +764,6 @@ var _hmt = _hmt || [];
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reverse/" rel="tag">reverse</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-coop"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/12/coop/"
-    >《Counterfeit Object-oriented Programming》 论文笔记</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/12/coop/" class="article-date">
-  <time datetime="2021-12-01T16:00:00.000Z" itemprop="datePublished">2021-12-02</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、简介">一、简介</h2>
-<p>现阶段，ROP (面向返回的编程技术) 已经成为了一种非常流行的利用手法，同时现在也存在各种方式来保护程序免受 ROP 工具，例如 shadow stack 技术。而这篇 2015 年的论文向我们展示了一种新的利用手法，称为<strong>面向伪对象编程（COOP）</strong>，即只通过程序中现有虚函数链以及 callsite 来进行恶意攻击。该攻击方式是<strong>图灵完备</strong>的，即可以执行任何操作，包括条件分支等。</p>
-<p>同时，COOP 技术也可以绕过那些 <strong>不精确考虑C++面向对象语义</strong> 的防御手段。它并不针对与某一类语言（例如 C++），因此自然无法防护 COOP 技术。</p>
-<p>该攻击手法基于 C++ 虚函数的一些特性：</p>
-<ul>
-<li>
-<p>C++ 编译器通过 <strong>vtable 虚函数表</strong>来实现对 <strong>vcall 虚函数</strong> 的访问</p>
-<blockquote>
-<p>其中 vtable 是指向类的所有可能继承继承的虚函数的指针数组。</p>
-<p>根据逆向结果来看， vtable 通常位于 .rodata 段上。</p>
-</blockquote>
-</li>
-<li>
-<p>对于包含虚函数的类来说，其对象内存开始处（即偏移量为0）包含一个指向 vtable 的指针。</p>
-</li>
-</ul> 
-      <a class="article-more-link" href="/2021/12/coop/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtual-call/" rel="tag">virtual call</a></li></ul>
 
     </footer>
   </div>
