@@ -162,6 +162,86 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-WebServer-1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/WebServer-1/"
+    >WebServer v1.0 文档</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/WebServer-1/" class="article-date">
+  <time datetime="2021-05-11T16:00:00.000Z" itemprop="datePublished">2021-05-12</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Project/">Project</a> / <a class="article-category-link" href="/categories/Project/WebServer/">WebServer</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="概述">概述</h2>
+<p>WebServer 1.0 简单实现了一个基础的 <strong>多并发网络服务程序</strong> 。在该版本中，主要实现了以下重要内容：</p>
+<ul>
+<li>线程互斥锁 &amp; 条件变量的封装</li>
+<li>线程池的设计，以支持并发</li>
+<li>基础网络连接的实现</li>
+<li>http 协议的简略支持
+<ul>
+<li>支持部分常用 HTTP 报文
+<ul>
+<li>200 OK</li>
+<li>400 Bad Request</li>
+<li>500 Internal Server Error</li>
+<li>501 Not Implemented</li>
+<li>505 HTTP Version Not Supported</li>
+</ul>
+</li>
+<li>支持 HTTP GET 请求</li>
+<li>支持 HTTP/1.1 <strong>持续连接</strong> 特性</li>
+</ul>
+</li>
+</ul>
+<p>1.0 版本的项目代码位于 <a href="https://github.com/Kiprey/WebServer/tree/4095ccc6fd3facd3988ea71178cacad7b4e0dd13" target="_blank" rel="noopener">Kiprey/WebServer CommitID: 4095cc - github</a></p>
+<p>最新版本的项目代码位于 <a href="https://github.com/Kiprey/WebServer" target="_blank" rel="noopener">Kiprey/WebServer - github</a></p> 
+      <a class="article-more-link" href="/2021/05/WebServer-1/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebServer/" rel="tag">WebServer</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-v8TurboFan_IR_intro"
   class="article article-type-post"
   itemscope
@@ -697,64 +777,6 @@ var _hmt = _hmt || [];
 <p><a href="https://github.com/github/securitylab/tree/main/CodeQL_Queries/cpp" target="_blank" rel="noopener">github SecurityLab</a> 上有多个CodeQL的使用例子</p>
 <p>通过学习这些例子，我们可以加深对CodeQL的了解，以便于更好的使用它。</p> 
       <a class="article-more-link" href="/2020/12/secLab-CodeQL-learning/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CodeQL/" rel="tag">CodeQL</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-CodeQL-setup"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/12/CodeQL-setup/"
-    >CodeQL初入</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/12/CodeQL-setup/" class="article-date">
-  <time datetime="2020-12-06T07:24:31.000Z" itemprop="datePublished">2020-12-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%A4%A9%E9%97%AE%E4%B9%8B%E8%B7%AF/">天问之路</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、简介">一、简介</h2>
-<p>CodeQL 是一个语义代码分析引擎，它可以扫描发现代码库中的漏洞。使用 CodeQL，可以像对待数据一样查询代码。编写查询条件以查找漏洞的所有变体并处理，同时可以分享个人查询条件。</p> 
-      <a class="article-more-link" href="/2020/12/CodeQL-setup/"
         >阅读更多...</a
       >
        

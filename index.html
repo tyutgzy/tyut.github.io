@@ -193,8 +193,59 @@ var _hmt = _hmt || [];
        
   <h2 id="Welcome-to-Kiprey’s-Blog">Welcome to Kiprey’s Blog.</h2>
 <h2 id="Just-enjoy-it">Just enjoy it. :)</h2>
-<p><strong>水的不行的 learning list：<a href="https://github.com/kiprey/skr_Learning" target="_blank" rel="noopener">github repo</a></strong></p> 
+<p><strong>个人不定期更新的学习周报：<a href="https://github.com/kiprey/skr_Learning" target="_blank" rel="noopener">github repo</a></strong></p> 
       <a class="article-more-link" href="/2020/05/Welcome/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-2022-summary"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/01/2022-summary/"
+    >2022年年终总结</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/2022-summary/" class="article-date">
+  <time datetime="2023-01-04T16:00:00.000Z" itemprop="datePublished">2023-01-05</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>2022 年年终总结</p> 
+      <a class="article-more-link" href="/2023/01/2022-summary/"
         >阅读更多...</a
       >
        
@@ -668,72 +719,6 @@ var _hmt = _hmt || [];
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/paper/" rel="tag">paper</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-e9patch"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/02/e9patch/"
-    >《Binary Rewriting without Control Flow Recovery》论文笔记</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/02/e9patch/" class="article-date">
-  <time datetime="2022-02-24T16:00:00.000Z" itemprop="datePublished">2022-02-25</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、概述">一、概述</h2>
-<p>二进制重写技术在很多场景下都有大用，例如修复、加固、插桩、打补丁、调试等等。而大部分二进制重写技术都依赖于从输入二进制中<strong>恢复控制流信息</strong>，这是因为这些二进制重写技术通常都涉及指令移动等等，这就必须调整其他跳转指令的相对跳转偏移，即修复<strong>跳转目标集</strong>。</p>
-<p>但问题在于，<strong>从二进制文件中恢复控制流信息是相当困难的</strong>：</p>
-<ul>
-<li>一种方法是<strong>依赖于特定的二进制元数据</strong>，例如调试符号来恢复重定位信息，但并非所有二进制都会包含这类元数据（strip）</li>
-<li>另一种方法是<strong>使用静态二进制分析技术</strong>来恢复，但通常效果不佳，而且不能应用于大小较大的二进制文件。</li>
-</ul>
-<p>因此大部分二进制重写技术都依赖于一组甚至多组假设，例如特定编译器、特定编程语言等等。这样一来这些二进制重写技术都存在着局限性，难以扩展，同时也没办法处理大型程序，比如 chrome。</p>
-<p>这篇论文向我们展示了一种基于 <strong>x86_64</strong> 的二进制重写技术，称为 e9patch。其中，<code>e9</code> 表示的是 <code>jmpq rel32</code> 的 opcode：0xe9。这种二进制重写技术的优点在于<strong>控制流无关</strong>（<strong>control flow agnostic</strong>），即<strong>无需任何控制流信息的知识</strong>。其二进制重写方法保留了跳转目标集，无需控制流恢复。因此， 这个工具相当的鲁棒，而且还可以 patch 诸如 chrome 等等大小大于 100MB 的二进制程序。</p>
-<p>除了普通的二进制程序以外，e9patch 还可以为 shared objects 或 libraries 打补丁。</p> 
-      <a class="article-more-link" href="/2022/02/e9patch/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/binary-rewriting/" rel="tag">binary rewriting</a></li></ul>
 
     </footer>
   </div>
