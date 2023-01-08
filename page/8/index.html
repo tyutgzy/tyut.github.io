@@ -162,6 +162,63 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-MakefileIntroduce"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/06/MakefileIntroduce/"
+    >Makefile的简单编写</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/06/MakefileIntroduce/" class="article-date">
+  <time datetime="2020-06-27T14:02:30.000Z" itemprop="datePublished">2020-06-27</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-简介">1. 简介</h2>
+<ul>
+<li>在Unix下的代码编译中，Makefile指定了一系列代码编译的规则。</li>
+<li>在编写好Makefile后，只需执行<code>make</code>便可轻松编译</li>
+</ul> 
+      <a class="article-more-link" href="/2020/06/MakefileIntroduce/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/makefile/" rel="tag">makefile</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-compiler-learning"
   class="article article-type-post"
   itemscope
@@ -739,77 +796,6 @@ var _hmt = _hmt || [];
 </li>
 </ul> 
       <a class="article-more-link" href="/2020/05/heap-13-off-by-one-and-realloc-hook/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BUUOJ/" rel="tag">BUUOJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Heap/" rel="tag">Heap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pwn/" rel="tag">Pwn</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-heap-12-fastbin_attack"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/05/heap-12-fastbin_attack/"
-    >heap - 12 - fastbin attack</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/05/heap-12-fastbin_attack/" class="article-date">
-  <time datetime="2020-05-04T16:00:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>利用Fastbin attack进行任意地址读写</p>
-<h2 id="1-原理">1. 原理</h2>
-<ul>
-<li>fastbin attack 存在的原因在于 fastbin 是使用fast chunk的fd指针，即单链表来维护释放的堆块的</li>
-<li>并且由 fastbin 管理的 chunk 即使被释放，其 next_chunk 的 prev_inuse 位也不会被清空</li>
-<li>利用的条件是
-<ul>
-<li>能够控制fast chunk的fd指针</li>
-<li>漏洞发生在fast chunk类型上</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-Arbitrary-Alloc">2. Arbitrary Alloc</h2>
-<h3 id="1-介绍">1) 介绍</h3>
-<ul>
-<li>
-<p>如果我们更改fastbin链尾的fast chunk fd指针为我们的目的地址<br>
-则在几次malloc后，fastbin指针就会指向我们的目的地址<br>
-下一次malloc fast_chunk就会取得目的地址的指针，然后就可以进行读写了（操作取决于程序）</p></li></ul> 
-      <a class="article-more-link" href="/2020/05/heap-12-fastbin_attack/"
         >阅读更多...</a
       >
        
