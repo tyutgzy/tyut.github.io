@@ -83,7 +83,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.3k</span>
+            <span class="post-count">1.5k</span>
         </span>
     </span>
 
@@ -92,7 +92,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">5 分钟</span>
+            <span class="post-count">6 分钟</span>
         </span>
     </span>
 </div>
@@ -169,13 +169,16 @@ var _hmt = _hmt || [];
 <li>
 <p>重启 docker 服务</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker restart</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：如果宿主机能连接网络但是 docker 无法连接， 则重启docker服务就能解决该问题。</p>
+</blockquote>
 </li>
 </ol>
 </li>
 <li>
 <p>Dockerfile 替换 apt 源</p>
 <p>默认 apt 源的下载速度非常感人，因此需要额外添加几句来替换默认 apt 源。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> cat /etc/apt/sources.list</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \</span></span><br><span class="line"><span class="bash">   &amp;&amp; sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \</span></span><br><span class="line"><span class="bash">   &amp;&amp; apt-get clean</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> cat /etc/apt/sources.list</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \</span></span><br><span class="line"><span class="bash">   &amp;&amp; sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \</span></span><br><span class="line"><span class="bash">   &amp;&amp; sed -i s@/security.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \</span></span><br><span class="line"><span class="bash">   &amp;&amp; sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \</span></span><br><span class="line"><span class="bash">   &amp;&amp; apt-get clean</span></span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>Dockerfile 替换 pip 源</p>
@@ -183,7 +186,18 @@ var _hmt = _hmt || [];
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> mkdir ~/.pip &amp;&amp; \</span></span><br><span class="line"><span class="bash">    <span class="built_in">cd</span> ~/.pip/  &amp;&amp; \</span></span><br><span class="line"><span class="bash">    <span class="built_in">echo</span> <span class="string">"[global] \ntrusted-host =  pypi.douban.com \nindex-url = http://pypi.douban.com/simple"</span> &gt;  pip.conf</span></span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>Dockerfile 使用</p>
+<p>Dockerfile 网络加速</p>
+<ul>
+<li>
+<p>github 加速：可以使用 <a href="https://gh.api.99988866.xyz/" target="_blank" rel="noopener">GitHub 文件加速</a> 网站来生成加速后的 github 文件下载链接。</p>
+</li>
+<li>
+<p>Docker 配置代理：可以参考这个 <a href="https://blog.csdn.net/qq_39698985/article/details/123748820" target="_blank" rel="noopener">Docker 配置网络代理 - CSDN</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dockerfile 构建 image</p>
 <p>在 Dockerfile 所在文件夹下，运行 <code>docker build -t chal .</code> 以构建 docker 实例。</p>
 <p>这里指定了构建好后的 image 名称为 <code>chal</code>，便于后面启动实例时指定名称，而不用再去查找 image id。</p>
 </li>
