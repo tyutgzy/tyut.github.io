@@ -162,6 +162,71 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-syzkaller-1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/03/syzkaller-1/"
+    >syzkaller 源码阅读笔记-1</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/03/syzkaller-1/" class="article-date">
+  <time datetime="2022-03-14T16:00:00.000Z" itemprop="datePublished">2022-03-15</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、简介">一、简介</h2>
+<p><a href="https://github.com/google/syzkaller" target="_blank" rel="noopener">syzkaller</a> 是 google 开源的一款无监督覆盖率引导的 kernel fuzzer，支持包括 Linux、Windows 等操作系统的测试。</p>
+<p>syzkaller 有很多个部件。其中：</p>
+<ul>
+<li>syz-extract：用于解析 syzlang 中的常量</li>
+<li>syz-sysgen：用于解析 syzlang，提取其中描述的 syscall 和参数类型，以及参数依赖关系</li>
+<li>syz-manager：用于启动与管理 syzkaller</li>
+<li>syz-fuzzer：实际在 VM 中运行的 fuzzer</li>
+<li>syz-executor：实际在 VM 中运行的测试程序</li>
+</ul>
+<p>架构图如下：</p>
+<p><img src="/2022/03/syzkaller-1/process_structure.png" alt="syzkaller 的进程结构"></p>
+<p>在本文中，我将先介绍 <strong>syz-extract 和 syz-sysgen</strong> 的源码。</p> 
+      <a class="article-more-link" href="/2022/03/syzkaller-1/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/syzkaller/" rel="tag">syzkaller</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-other_paper_notes"
   class="article article-type-post"
   itemscope
@@ -733,73 +798,13 @@ var _hmt = _hmt || [];
 </article>
 
     
-    <article
-  id="post-mach_ipc_intro"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/12/mach_ipc_intro/"
-    >MacOSX Mach IPC 入门</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/12/mach_ipc_intro/" class="article-date">
-  <time datetime="2021-12-23T16:00:00.000Z" itemprop="datePublished">2021-12-24</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、简介">一、简介</h2>
-<p>Mach，是一个<strong>面向通信</strong>的操作系统<strong>微内核</strong>，其基本工作单位为 <code>task</code>（而不是 process）。Mach 内核提供了一种 IPC 机制，而 XNU 的大多数服务也建立在 Mach IPC 和 Mach Task 上。</p>
-<p>Mach 有多种抽象的基本概念，其中一部分分别是 <code>task</code>、<code>thread</code>、<code>port</code>、<code>message</code>、<code>memory object</code>。</p>
-<p>Mach 微内核作为 MacOS XNU 内核的组成部分，接管了相当重要的一部分功能。其中最著名的莫过于 Mach IPC 进程间通信机制。</p>
-<p>本人将在这里简单记录一下 Mach IPC 部分机理。</p>
-<blockquote>
-<p>需要注意的是，这是本人第一次接触 Mach IPC，因此其中可能会有一部分陈述或者说明存在问题，还请各位师傅不吝指出。</p>
-</blockquote> 
-      <a class="article-more-link" href="/2021/12/mach_ipc_intro/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ipc/" rel="tag">ipc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mach/" rel="tag">mach</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav>
   
 </section>

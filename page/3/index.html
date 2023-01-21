@@ -162,6 +162,66 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-mach_ipc_intro"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/mach_ipc_intro/"
+    >MacOSX Mach IPC 入门</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/mach_ipc_intro/" class="article-date">
+  <time datetime="2021-12-23T16:00:00.000Z" itemprop="datePublished">2021-12-24</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、简介">一、简介</h2>
+<p>Mach，是一个<strong>面向通信</strong>的操作系统<strong>微内核</strong>，其基本工作单位为 <code>task</code>（而不是 process）。Mach 内核提供了一种 IPC 机制，而 XNU 的大多数服务也建立在 Mach IPC 和 Mach Task 上。</p>
+<p>Mach 有多种抽象的基本概念，其中一部分分别是 <code>task</code>、<code>thread</code>、<code>port</code>、<code>message</code>、<code>memory object</code>。</p>
+<p>Mach 微内核作为 MacOS XNU 内核的组成部分，接管了相当重要的一部分功能。其中最著名的莫过于 Mach IPC 进程间通信机制。</p>
+<p>本人将在这里简单记录一下 Mach IPC 部分机理。</p>
+<blockquote>
+<p>需要注意的是，这是本人第一次接触 Mach IPC，因此其中可能会有一部分陈述或者说明存在问题，还请各位师傅不吝指出。</p>
+</blockquote> 
+      <a class="article-more-link" href="/2021/12/mach_ipc_intro/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ipc/" rel="tag">ipc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mach/" rel="tag">mach</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-vmware_macos"
   class="article article-type-post"
   itemscope
@@ -596,62 +656,6 @@ var _hmt = _hmt || [];
 
     
     <article
-  id="post-cs144-lab6"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/cs144-lab6/"
-    >CS144计算机网络 Lab6</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/11/cs144-lab6/" class="article-date">
-  <time datetime="2021-11-17T16:00:00.000Z" itemprop="datePublished">2021-11-18</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、简介">一、简介</h2>
-<p>这里记录了笔者学习 CS144 计算机网络 Lab6 的一些笔记 - <strong>IP Router 路由器</strong> 的实现</p>
-<p>CS144 Lab6 实验指导书 - <a href="https://cs144.github.io/assignments/lab6.pdf" target="_blank" rel="noopener">Lab Checkpoint 6: building an IP router</a></p>
-<p>个人 CS144 实验项目地址 - <a href="https://github.com/Kiprey/sponge" target="_blank" rel="noopener">github</a></p> 
-      <a class="article-more-link" href="/2021/11/cs144-lab6/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CS144/" rel="tag">CS144</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
   id="post-cs144-lab7"
   class="article article-type-post"
   itemscope
@@ -709,7 +713,7 @@ var _hmt = _hmt || [];
 
     
     <article
-  id="post-cs144-lab5"
+  id="post-cs144-lab6"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -720,8 +724,8 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/11/cs144-lab5/"
-    >CS144计算机网络 Lab5</a> 
+  <a class="article-title" href="/2021/11/cs144-lab6/"
+    >CS144计算机网络 Lab6</a> 
 </h2>
  
 
@@ -729,18 +733,18 @@ var _hmt = _hmt || [];
     </header>
      
     <div class="article-meta">
-      <a href="/2021/11/cs144-lab5/" class="article-date">
-  <time datetime="2021-11-15T16:00:00.000Z" itemprop="datePublished">2021-11-16</time>
+      <a href="/2021/11/cs144-lab6/" class="article-date">
+  <time datetime="2021-11-17T16:00:00.000Z" itemprop="datePublished">2021-11-18</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
   <h2 id="一、简介">一、简介</h2>
-<p>这里记录了笔者学习 CS144 计算机网络 Lab5 的一些笔记 - <strong>网络接口 network interface（也被称为适配器）</strong> 的实现</p>
-<p>CS144 Lab5 实验指导书 - <a href="https://cs144.github.io/assignments/lab5.pdf" target="_blank" rel="noopener">Lab Checkpoint 5: down the stack (the network interface)</a></p>
+<p>这里记录了笔者学习 CS144 计算机网络 Lab6 的一些笔记 - <strong>IP Router 路由器</strong> 的实现</p>
+<p>CS144 Lab6 实验指导书 - <a href="https://cs144.github.io/assignments/lab6.pdf" target="_blank" rel="noopener">Lab Checkpoint 6: building an IP router</a></p>
 <p>个人 CS144 实验项目地址 - <a href="https://github.com/Kiprey/sponge" target="_blank" rel="noopener">github</a></p> 
-      <a class="article-more-link" href="/2021/11/cs144-lab5/"
+      <a class="article-more-link" href="/2021/11/cs144-lab6/"
         >阅读更多...</a
       >
        
@@ -770,7 +774,7 @@ var _hmt = _hmt || [];
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
   </nav>
   
 </section>

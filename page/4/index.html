@@ -162,6 +162,62 @@ var _hmt = _hmt || [];
     
     
     <article
+  id="post-cs144-lab5"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/11/cs144-lab5/"
+    >CS144计算机网络 Lab5</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/11/cs144-lab5/" class="article-date">
+  <time datetime="2021-11-15T16:00:00.000Z" itemprop="datePublished">2021-11-16</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、简介">一、简介</h2>
+<p>这里记录了笔者学习 CS144 计算机网络 Lab5 的一些笔记 - <strong>网络接口 network interface（也被称为适配器）</strong> 的实现</p>
+<p>CS144 Lab5 实验指导书 - <a href="https://cs144.github.io/assignments/lab5.pdf" target="_blank" rel="noopener">Lab Checkpoint 5: down the stack (the network interface)</a></p>
+<p>个人 CS144 实验项目地址 - <a href="https://github.com/Kiprey/sponge" target="_blank" rel="noopener">github</a></p> 
+      <a class="article-more-link" href="/2021/11/cs144-lab5/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CS144/" rel="tag">CS144</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-cs144-lab4"
   class="article article-type-post"
   itemscope
@@ -672,98 +728,13 @@ var _hmt = _hmt || [];
 </article>
 
     
-    <article
-  id="post-epoll"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/epoll/"
-    >Epoll 小叙</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/epoll/" class="article-date">
-  <time datetime="2021-05-21T16:00:00.000Z" itemprop="datePublished">2021-05-22</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Project/">Project</a> / <a class="article-category-link" href="/categories/Project/WebServer/">WebServer</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、概述">一、概述</h2>
-<ul>
-<li>
-<p>epoll 是  Linux 内核为了处理大批量的文件描述符而改进的 poll，是 Linux 下多路复用IO接口select/poll的增强版本。epoll可以显著提高程序在大量并发连接中只有少量活跃的情况下的系统的CPU利用率。</p>
-</li>
-<li>
-<p>服务器要管理多个客户端的连接，而 recv 函数只能监视单个 socket，因此引入了 select/poll。</p>
-<p>但 select 能监测的文件描述符个数限制在 FD_SETSIZE，通常是1024个。这对于并发量达到上万的服务器来说显然不够。与之相对的是，epoll所支持的fd上限是最大可以打开的数目，具体数字可以<code>cat /proc/sys/fs/file-max</code>查看（本人机器上该值为<code>9223372036854775807</code>）。</p>
-</li>
-<li>
-<p>当存在部分<strong>活跃</strong>socket时，传统 select/poll 会<strong>线性扫描</strong>整个socket集合，这会让效率随着socket数量的增加而线性下降，而这就是限制了 select 最大监视数量的原因，程序被唤醒后不知道是哪个 socket 处于活跃状态，需要遍历。</p>
-<p>而 epoll 是基于每个 fd 上面的 callback 函数实现，因此只会对活跃的 socket 进行处理，效率更高。</p>
-</li>
-<li>
-<p>select、poll、epoll之间的区别</p>
-<ul>
-<li>select：只知道有I/O事件发生，但不知道是具体哪一个，因此只能无差别遍历所有流。时间复杂度$O(n)$，fd数量限制在 FD_SETSIZWE。</li>
-<li>poll：大致同上，轮询所有套接字，时间复杂度为 $O(n)$，但fd没有数量限制，因为它使用链表存储fd。</li>
-<li>epoll: <strong>事件驱动</strong>，epoll会把<strong>哪个流</strong>发生了<strong>怎样的IO事件</strong>通知给用户。时间复杂度$O(1)$。</li>
-</ul>
-</li>
-<li>
-<p>epoll提供了两种触发方式</p>
-<ul>
-<li>一种是传统 select/poll 的水平触发（Level Triggered, LT），缺省工作模式，同时还支持<strong>阻塞</strong>和<strong>非阻塞</strong>的socket。当某个文件描述符准备就绪后，内核会<strong>持续通知</strong>用户，直到重新变为未就绪状态。</li>
-<li>再一种是边缘触发（Edge Triggered），高速工作模式，只支持<strong>非阻塞</strong>的socket。当某个文件描述符从未就绪<strong>变成</strong>就绪时，内核会通过epoll通知用户。<strong>注意，只通知一次</strong>。通知动作只会在文件描述符从未就绪变成就绪这个时刻触发。如果一个已经就绪的文件描述符迟迟不被处理，即一直位于就绪状态，那么该文件描述符就一直<strong>不会</strong>触发通知。</li>
-</ul>
-</li>
-</ul> 
-      <a class="article-more-link" href="/2021/05/epoll/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebServer/" rel="tag">WebServer</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/5/">下一页</a>
   </nav>
   
 </section>
